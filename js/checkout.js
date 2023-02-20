@@ -3,35 +3,35 @@
 
 function validate() {
 
-	var error = 0;
+	let error = 0;
 
 	// Get the input fields
-	var fName = document.getElementById("fName");
-	var fEmail = document.getElementById("fEmail");
+	let fName = document.getElementById("fName");
+	let fEmail = document.getElementById("fEmail");
 
-	var fAddress = document.getElementById("fAddress");
-	var fLastN = document.getElementById("fLastN");
-	var fPassword = document.getElementById("fPassword");
-	var fPhone = document.getElementById("fPhone");
+	let fAddress = document.getElementById("fAddress");
+	let fLastN = document.getElementById("fLastN");
+	let fPassword = document.getElementById("fPassword");
+	let fPhone = document.getElementById("fPhone");
 
 	// Get the error elements
 
-	var errorName = document.getElementById("errorName"); //This field is required and must have, at least, 3 characters
-	var errorEmail = document.getElementById("errorEmail");
+	let errorName = document.getElementById("errorName"); //This field is required and must have, at least, 3 characters
+	let errorEmail = document.getElementById("errorEmail");
 	
-	var errorAddress = document.getElementById("errorAddress");
-	var errorLastN = document.getElementById("errorLastN");
-	var errorPassword = document.getElementById("errorPassword");
-	var errorPhone = document.getElementById("errorPhone");
+	let errorAddress = document.getElementById("errorAddress");
+	let errorLastN = document.getElementById("errorLastN");
+	let errorPassword = document.getElementById("errorPassword");
+	let errorPhone = document.getElementById("errorPhone");
 
 	// Validate fields entered by the user: name, phone, password, and email
 
 	/**************************************** FUNCIÓ NOMÉS LLETRES ************************/
 
 	function nomesLletres(string) {
-		var x = false;
-		var filtre = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
-		var i = 0;
+		let x = false;
+		let filtre = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+		let i = 0;
 		console.log(filtre.indexOf(string.charAt(i)));
 
 		while (!x && i < string.length) {
@@ -48,9 +48,9 @@ function validate() {
 	/**************************************** FUNCIÓ NOMÉS NÚMEROS ************************/
 
 	function nomesNumeros(string) {
-		var x = false;
-		var filtre = '0123456789';
-		var i = 0;
+		let x = false;
+		let filtre = '0123456789';
+		let i = 0;
 		//console.log(filtre.indexOf(string.charAt(i)));
 		while (!x && i < string.length) {
 
@@ -69,9 +69,9 @@ function validate() {
 
 	function conteLletres(string) {
 
-		var i = 0;
-		var y = false;
-		var filtre1 = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+		let i = 0;
+		let y = false;
+		let filtre1 = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
 
 		while (!y && i < string.length) {
 
@@ -84,9 +84,9 @@ function validate() {
 
 	function conteNumeros(string) {
 
-		var i = 0;
-		var z = false;
-		var filtre2 = '0123456789';
+		let i = 0;
+		let z = false;
+		let filtre2 = '0123456789';
 
 		while (!z && i < string.length) {
 
@@ -102,9 +102,9 @@ function validate() {
 	/**************************************** FUNCIÓ MAIL  ************************/
 
 	function mail(string) {
-		var matriu = string.split('');
-		var i = 0;
-		var arroba = 0;
+		let matriu = string.split('');
+		let i = 0;
+		let arroba = 0;
 
 		for (i = 0; i < matriu.length; i++) {
 
